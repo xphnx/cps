@@ -54,18 +54,18 @@
 
     &--message {
       &::before {
-        background-image: url('/img/icons/callback-icon.svg');
+        background-image: url('../img/icons/callback-icon.svg');
       }
     }
     &--callback {
       &::before {
-        background-image: url('/img/icons/message-icon.svg');
+        background-image: url('../img/icons/message-icon.svg');
         background-position: 10px 10px;
       }
     }
     &--profile {
       &::before {
-        background-image: url('/img/icons/profile-icon.svg');
+        background-image: url('../img/icons/profile-icon.svg');
         background-position: 10px 10px;
       }
     }
@@ -84,7 +84,7 @@
       }
 
       &::before {
-        background-image: url('/img/icons/burger-icon.svg');
+        background-image: url('../img/icons/burger-icon.svg');
       }
     }
     &--services {
@@ -93,22 +93,22 @@
       }
 
       &::before {
-        background-image: url('/img/icons/services-icon.svg');
+        background-image: url('../img/icons/services-icon.svg');
       }
     }
     &--search1 {
       &::before {
-        background-image: url('/img/icons/search-icon1.svg');
+        background-image: url('../img/icons/search-icon1.svg');
       }
     }
     &--search2 {
       &::before {
-        background-image: url('/img/icons/search-icon2.svg');
+        background-image: url('../img/icons/search-icon2.svg');
       }
     }
     &--close-menu {
       &::before {
-        background-image: url('/img/icons/close-icon.svg');
+        background-image: url('../img/icons/close-icon.svg');
       }
 
       @media (min-width: 1360px) {
