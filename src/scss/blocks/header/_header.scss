@@ -1,0 +1,22 @@
+.header {
+  padding: 18px 0;
+  background-color: #FFF;
+  border: 1px solid #D9FFF5;
+
+  @media (min-width: 1360px) {
+    display: none;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    margin: 0 -8px;
+  }
+  &__tablet-buttons {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      margin-right: 26px;
+    }
+  }
+}

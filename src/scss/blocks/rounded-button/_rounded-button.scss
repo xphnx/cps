@@ -1,0 +1,119 @@
+.rounded-button {
+  padding: 0;
+  height: 40px;
+  font-size: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color .3s;
+  -webkit-tap-highlight-color: transparent;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  &:hover,
+  &:active {
+    color: $additional-font-color;
+  }
+
+  &--navigation {
+    margin: 0 8px;
+  }
+  &--menu:not(:last-of-type) {
+    margin-right: 16px;
+  }
+  &--title {
+    display: none;
+
+    @media (min-width: 1360px) {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      margin-left: 32px;
+    }
+
+    &::before {
+      margin-left: 8px;
+    }
+  }
+  &--icon {
+    &::before {
+      background: $icon-color no-repeat center center;
+      transition: background-color .3s;
+    }
+    &:hover::before {
+      background-color: $navigation-color;
+    }
+
+    &--message {
+      &::before {
+        background-image: url('/img/icons/callback-icon.svg');
+      }
+    }
+    &--callback {
+      &::before {
+        background-image: url('/img/icons/message-icon.svg');
+        background-position: 10px 10px;
+      }
+    }
+    &--profile {
+      &::before {
+        background-image: url('/img/icons/profile-icon.svg');
+        background-position: 10px 10px;
+      }
+    }
+    &--burger {
+      &.divider::after {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: inline-block;
+          transform: translateX(22px) translateY(-4px);
+        }
+      }
+
+      @media (min-width: 768px) {
+        margin-right: 34px;
+      }
+
+      &::before {
+        background-image: url('/img/icons/burger-icon.svg');
+      }
+    }
+    &--services {
+      @media (min-width: 1360px) {
+        margin-left: auto;
+      }
+
+      &::before {
+        background-image: url('/img/icons/services-icon.svg');
+      }
+    }
+    &--search1 {
+      &::before {
+        background-image: url('/img/icons/search-icon1.svg');
+      }
+    }
+    &--search2 {
+      &::before {
+        background-image: url('/img/icons/search-icon2.svg');
+      }
+    }
+    &--close-menu {
+      &::before {
+        background-image: url('/img/icons/close-icon.svg');
+      }
+
+      @media (min-width: 1360px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.about {
+  padding-top: 24px;
+
+  &__menu {
+    padding: 24px 0;
+    overflow-x: auto;
+
+    @media (min-width: 768px) {
+      padding: 32px 0;
+    }
+    @media (min-width: 1120px) {
+      padding: 10px 0;
+    }
+  }
+  &__menu-list {
+    display: flex;
+
+    @media (min-width: 1360px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__menu-list-item {
+    border: 2px solid transparent;
+    flex-shrink: 0;
+    color: $additional-font-color;
+    &--active,
+    &:hover {
+      border: 2px solid $additional-navigation-color;
+      border-radius: 6px;
+      background-color: #FFF;
+    }
+  }
+  &__menu-link {
+    display: block;
+    padding: 8px 16px;
+
+    @media (min-width: 1120px) {
+      padding: 8px 22px;
+    }
+  }
+  &__navigation-wrapper {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 40px;
+      background: url('/img/icons/fade.svg');
+    }
+  }
+  &__text-box {
+    letter-spacing: 0.2px;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &__text-group {
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    font-weight: 400;
+    height: 90px;
+    overflow-y: hidden;
+
+    @media (min-width: 768px) {
+      line-height: 20px;
+      height: 133px;
+    }
+    @media (min-width: 1120px) {
+      height: 153px;
+    }
+  }
+  &__text-group,
+  &__wrapper {
+    margin-bottom: 16px;
+  }
+  &__wrapper {
+    @media (min-width: 768px) {
+      flex: 1 1 50%;
+      margin-right: 48px;
+    }
+  }
+  &__text:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &__image {
+    margin: 0 -16px;
+
+    img {
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        border-radius: 6px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex: 1 1 50%;
+      margin: 0;
+    }
+  }
+}

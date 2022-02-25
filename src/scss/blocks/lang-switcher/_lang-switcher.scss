@@ -1,0 +1,9 @@
+.lang-switcher {
+  &__item:not(:last-child) {
+    margin-right: 7px;
+  }
+  &__item--selected,
+  &__item:hover, {
+    color: $additional-font-color;
+  }
+}

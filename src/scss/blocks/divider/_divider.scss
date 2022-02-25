@@ -1,0 +1,8 @@
+.divider::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 32px;
+  background: #EAEAEA;
+  transform: translateX(-60px) translateY(-4px);
+}

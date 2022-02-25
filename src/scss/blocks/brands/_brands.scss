@@ -1,0 +1,88 @@
+.brands {
+  &__list {
+    height: 116px;
+    margin-right: -16px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      height: 175px;
+      margin: 16px -12px;
+    }
+    @media (min-width: 1120px) {
+      margin: 16px -16px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 16px;
+      width: 24px;
+      height: 72px;
+      z-index: 99;
+      background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .brands__pagination{
+      bottom: -5px;
+      span {
+        background: #DDDDDD;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  &__wrapper {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    height: 72px;
+    margin: 16px 0;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+      margin: 8px 12px;
+      width: calc(100% / 3 - 24px);
+    }
+    @media (min-width: 1120px) {
+      margin: 8px 16px;
+      width: calc(100% / 4 - 32px);
+    }
+  }
+  &__link {
+    position: relative;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $icon-color;
+    border-radius: 50%;
+    font-size: 0;
+    -webkit-tap-highlight-color: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-30%, -50%);
+      background: url('/img/icons/arrow-icon.svg') no-repeat center center;
+    }
+  }
+}

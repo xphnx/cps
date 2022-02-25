@@ -1,0 +1,19 @@
+.section {
+  padding-bottom: 24px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 32px;
+  }
+  @media (min-width: 1120px) {
+    padding-bottom: 42px;
+  }
+
+  &__title {
+    letter-spacing: -0.2px;
+    color: $additional-font-color;
+    text-transform: uppercase;
+    padding: 16px 0;
+    background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+    border-top: 1px solid #D9FFF5;
+  }
+}

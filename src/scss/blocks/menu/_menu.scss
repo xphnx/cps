@@ -1,0 +1,120 @@
+.menu {
+  position: fixed;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
+  bottom: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 16px 0 0;
+  background: #fff;
+  overflow: auto;
+  letter-spacing: -0.2px;
+  box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-400px);
+  transition: transform .5s, opacity 1s, visibility .1s ease-in-out;
+  z-index: 99;
+
+  @media (min-width: 361px) {
+    width: 320px;
+  }
+  @media (min-width: 1360px) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    box-shadow: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 22px;
+    }
+  }
+  &__list {
+    margin-bottom: 20px;
+
+    a {
+      display: block;
+      padding: 4px 0;
+    }
+  }
+  &__list-item {
+    margin: 16px 0;
+
+    &:hover {
+      color: $additional-font-color;
+    }
+
+    @media (min-width: 768px) {
+      margin: 24px 0;
+    }
+  }
+  &__link {
+    &--active {
+      position: relative;
+      color: $additional-font-color;
+
+      &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 4px;
+          top: 0;
+          left: -16px;
+          background-color: $navigation-color;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+
+        @media (min-width: 768px) {
+          left: -24px;
+        }
+      }
+    }
+  }
+  &__footer {
+    margin-top: auto;
+  }
+  &__footer-buttons {
+    margin-bottom: 16px;
+  }
+  &__footer-phone,
+  &__footer-email {
+    display: block;
+  }
+  &__footer-email {
+    margin-bottom: 12px;
+
+    &:hover {
+      color: $additional-font-color;
+    }
+  }
+  &__footer-phone {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+
+    &:hover {
+      color: $additional-font-color;
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  &__lang-switcher {
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    cursor: pointer;
+  }
+  &--opened {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
