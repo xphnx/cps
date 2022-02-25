@@ -818,12 +818,12 @@ table {
   .rounded-button--icon:hover::before {
     background-color: #41F6D7; }
   .rounded-button--icon--message::before {
-    background-image: url("/img/icons/callback-icon.svg"); }
+    background-image: url(./static/callback-icon.svg); }
   .rounded-button--icon--callback::before {
-    background-image: url("/img/icons/message-icon.svg");
+    background-image: url(./static/message-icon.svg);
     background-position: 10px 10px; }
   .rounded-button--icon--profile::before {
-    background-image: url("/img/icons/profile-icon.svg");
+    background-image: url(./static/profile-icon.svg);
     background-position: 10px 10px; }
   .rounded-button--icon--burger.divider::after {
     display: none; }
@@ -835,18 +835,18 @@ table {
     .rounded-button--icon--burger {
       margin-right: 34px; } }
   .rounded-button--icon--burger::before {
-    background-image: url("/img/icons/burger-icon.svg"); }
+    background-image: url(./static/burger-icon.svg); }
   @media (min-width: 1360px) {
     .rounded-button--icon--services {
       margin-left: auto; } }
   .rounded-button--icon--services::before {
-    background-image: url("/img/icons/services-icon.svg"); }
+    background-image: url(./static/services-icon.svg); }
   .rounded-button--icon--search1::before {
-    background-image: url("/img/icons/search-icon1.svg"); }
+    background-image: url(./static/search-icon1.svg); }
   .rounded-button--icon--search2::before {
-    background-image: url("/img/icons/search-icon2.svg"); }
+    background-image: url(./static/search-icon2.svg); }
   .rounded-button--icon--close-menu::before {
-    background-image: url("/img/icons/close-icon.svg"); }
+    background-image: url(./static/close-icon.svg); }
   @media (min-width: 1360px) {
     .rounded-button--icon--close-menu {
       display: none; } }
@@ -873,6 +873,7 @@ table {
       width: 320px; } }
   @media (min-width: 1360px) {
     .menu {
+      padding-top: 30px;
       opacity: 1;
       visibility: visible;
       transform: translateX(0);
@@ -949,6 +950,9 @@ table {
 
 .about {
   padding-top: 24px; }
+  @media (min-width: 1360px) {
+    .about {
+      padding-top: 42px; } }
   .about__menu {
     padding: 24px 0;
     overflow-x: auto; }
@@ -987,7 +991,7 @@ table {
       transform: translateY(-50%);
       width: 20px;
       height: 40px;
-      background: url("/img/icons/fade.svg"); }
+      background: url(./static/fade.svg); }
   .about__text-box {
     letter-spacing: 0.2px; }
     @media (min-width: 768px) {
@@ -1099,7 +1103,7 @@ table {
     top: 50%;
     left: 50%;
     transform: translate(-30%, -50%);
-    background: url("/img/icons/arrow-icon.svg") no-repeat center center; }
+    background: url(./static/arrow-icon.svg) no-repeat center center; }
 
 .go-further::after {
   letter-spacing: -0.2px;
@@ -1112,7 +1116,7 @@ table {
   padding-right: 24px;
   width: 8px;
   height: 10px;
-  background: url("/img/icons/further-icon.svg") no-repeat center center; }
+  background: url(./static/further-icon.svg) no-repeat center center; }
 
 .go-further__checkbox {
   display: none; }
