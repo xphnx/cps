@@ -1,10 +1,4 @@
 .about {
-  padding-top: 24px;
-
-  @media (min-width: 1360px) {
-    padding-top: 42px;
-  }
-
   &__menu {
     padding: 24px 0;
     overflow-x: auto;

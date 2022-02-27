@@ -1,41 +1,37 @@
-.brands {
-  &__list {
-    height: 116px;
-    margin-right: -16px;
-    position: relative;
+.slider {
+  margin-right: -16px;
+  position: relative;
 
-    @media (min-width: 768px) {
-      height: 175px;
-      margin: 16px -12px;
-    }
-    @media (min-width: 1120px) {
-      margin: 16px -16px;
-    }
+  @media (min-width: 768px) {
+    margin: 16px -12px;
+  }
+  @media (min-width: 1120px) {
+    margin: 16px -16px;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 16px;
-      width: 24px;
-      height: 72px;
-      z-index: 99;
-      background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-
-      @media (min-width: 768px) {
-        display: none;
-      }
-    }
-
-    .brands__pagination{
-      bottom: -5px;
-      span {
-        background: #DDDDDD;
-        width: 12px;
-        height: 12px;
-      }
+  .slider__pagination {
+    bottom: -5px;
+    span {
+      background: #DDDDDD;
+      width: 12px;
+      height: 12px;
     }
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 16px;
+    width: 24px;
+    z-index: 99;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   &__wrapper {
     @media (min-width: 768px) {
       display: flex;
@@ -44,10 +40,7 @@
   }
   &__item {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 240px;
-    height: 72px;
     margin: 16px 0;
     padding: 16px;
     background: #fff;

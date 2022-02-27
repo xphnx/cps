@@ -1,0 +1,18 @@
+.brands {
+  &__list {
+    height: 116px;
+
+    @media (min-width: 768px) {
+      height: 175px;
+    }
+
+    &::after {
+      height: 72px;
+    }
+  }
+  &__item {
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+}

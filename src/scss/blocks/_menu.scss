@@ -13,7 +13,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateX(-400px);
-  transition: transform .5s, opacity 1s, visibility .1s ease-in-out;
+  transition: transform .5s, opacity 1s, visibility .5s ease-in-out;
   z-index: 99;
 
   @media (min-width: 361px) {

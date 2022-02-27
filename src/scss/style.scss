@@ -4,18 +4,20 @@
 @import 'fonts';
 @import 'vars';
 
-@import 'blocks/container/container';
-@import 'blocks/header/header';
-@import 'blocks/logo/logo';
-@import 'blocks/divider/divider';
-@import 'blocks/section/section';
-@import 'blocks/main/main';
-@import 'blocks/rounded-button/rounded-button';
-@import 'blocks/menu/menu';
-@import 'blocks/lang-switcher/lang-switcher';
-@import 'blocks/about/about';
-@import 'blocks/brands/brands';
-@import 'blocks/go-further/go-further';
+@import 'blocks/container';
+@import 'blocks/header';
+@import 'blocks/logo';
+@import 'blocks/divider';
+@import 'blocks/section';
+@import 'blocks/main';
+@import 'blocks/rounded-button';
+@import 'blocks/menu';
+@import 'blocks/lang-switcher';
+@import 'blocks/go-further';
+@import 'blocks/slider';
+
+@import 'sections/about';
+@import 'sections/brands';
 
 body {
   font-family: $main-font-family;
