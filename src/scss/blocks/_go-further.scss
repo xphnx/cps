@@ -17,7 +17,7 @@
     display: none;
 
     &:checked + .about__text-group,
-    &:checked + .brands__list {
+    &:checked + .slider {
       height: auto;
     }
     &:checked ~ .go-further::before {
