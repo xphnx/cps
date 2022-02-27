@@ -1,0 +1,17 @@
+.services {
+  &__list {
+    height: 205px;
+
+    @media (min-width: 768px) {
+      height: 175px;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    height: 160px;
+  }
+  &__link {
+    align-self: flex-end;
+  }
+}
