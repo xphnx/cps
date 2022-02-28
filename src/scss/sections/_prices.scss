@@ -1,0 +1,76 @@
+.prices {
+  &__list {
+    min-height: 246px;
+
+    &::after {
+      height: 200px;
+    }
+  }
+  &__item {
+    flex-direction: column;
+    width: 260px;
+    min-height: 200px;
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    border: none;
+    padding-top: 0;
+  }
+  &__group {
+    position: relative;
+    margin-top: 36px;
+
+    &:last-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+  }
+  &__service::before,
+  &__price::before,
+  &__time::before {
+    position: absolute;
+    color: $additional-font-color;
+    top: -20px;
+  }
+  &__service {
+    &::before {
+      content: 'Ремонтые услуги';
+    }
+  }
+  &__price {
+    &::before {
+      content: 'Цена';
+    }
+  }
+  &__time {
+    position: relative;
+
+    &::before {
+      content: 'Срок';
+    }
+  }
+  &__order {
+    position: relative;
+    border: none;
+    border-radius: 16px;
+    background-color: $icon-color;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 4px 40px 4px 12px;
+    font-size: .85em;
+    line-height: $main-line-height;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 10px;
+      right: 16px;
+      top: 11px;
+      background: url('../img/icons/dropdown.svg') no-repeat center center;
+    }
+  }
+}

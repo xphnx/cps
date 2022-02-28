@@ -19,6 +19,7 @@
 @import 'sections/about';
 @import 'sections/brands';
 @import 'sections/services';
+@import 'sections/prices';
 
 body {
   font-family: $main-font-family;
@@ -62,4 +63,8 @@ a {
 
 .swiper-pagination-bullet-active {
   background: #B5B6BC;
+}
+
+.swiper-wrapper {
+  height: auto;
 }

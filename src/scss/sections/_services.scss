@@ -5,6 +5,10 @@
     @media (min-width: 768px) {
       height: 175px;
     }
+
+    &::after {
+      height: 160px;
+    }
   }
   &__item {
     display: flex;
