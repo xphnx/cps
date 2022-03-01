@@ -66,16 +66,45 @@
     border-radius: 50%;
     font-size: 0;
     -webkit-tap-highlight-color: transparent;
+    transition: all .5s ease;
 
-    &::after {
+    &:hover {
+      background-color: $navigation-color;
+      border-color: $navigation-color;
+
+      &::after {
+        opacity: 0;
+        transform: translate(20%, -50%);
+        transition-property: transform, opacity;
+        transition-duration: .3s, .1s;
+        transition-delay: 0s, .2s;
+      }
+      &::before {
+        opacity: 1;
+        width: 10px;
+        height: 14px;
+        transform: translate(20%, -50%);
+        background: url('../img/icons/dropdown.svg') no-repeat center center;
+        background-size: contain;
+        transition-property: opacity;
+        transition-delay: .3s;
+      }
+    }
+    &::after,
+    &::before {
       content: '';
       position: absolute;
-      width: 8px;
-      height: 12px;
       top: 50%;
       left: 50%;
+    }
+    &::after {
+      width: 8px;
+      height: 12px;
       transform: translate(-30%, -50%);
       background: url('../img/icons/arrow-icon.svg') no-repeat center center;
+    }
+    &::before {
+      opacity: 0;
     }
   }
 }
