@@ -1,23 +1,78 @@
 .prices {
+  &__terms {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: table-header-group;
+    }
+  }
+  &__term {
+    display: table-cell;
+  }
   &__list {
-    min-height: 246px;
+    height: 246px;
+
+    @media (min-width: 768px) {
+      height: auto;
+      margin: 63px 0 0 0;
+      padding: 0 16px;
+      background: #fff;
+      border-radius: 6px;
+      overflow: visible;
+    }
+    @media (min-width: 1120px) {
+      padding: 0 24px;
+    }
 
     &::after {
       height: 200px;
     }
   }
+  &__wrapper {
+    @media (min-width: 768px) {
+      display: table;
+      background: #FFF;
+    }
+  }
   &__item {
     flex-direction: column;
     width: 260px;
-    min-height: 200px;
+    height: 200px;
     font-size: $paragraph-font-size;
     line-height: $paragraph-line-height;
     border: none;
     padding-top: 0;
+
+    @media (min-width: 768px) {
+      display: table-row;
+      padding: 0;
+      margin: 0;
+      width: auto;
+      height: auto;
+
+      &:not(:last-child) {
+        .prices__group {
+          border-bottom: 1px solid #EAEAEA;
+        }
+      }
+      &:first-child {
+        .prices__service::before,
+        .prices__price::before,
+        .prices__time::before {
+          display: block;
+          top: -32px;
+        }
+      }
+    }
   }
   &__group {
     position: relative;
     margin-top: 36px;
+
+    @media (min-width: 768px) {
+      display: table-cell;
+      padding: 23px 0;
+    }
 
     &:last-child {
       display: flex;
@@ -32,6 +87,10 @@
     position: absolute;
     color: $additional-font-color;
     top: -20px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
   &__service {
     &::before {
@@ -45,6 +104,10 @@
   }
   &__time {
     position: relative;
+
+    @media (min-width: 768px) {
+      position: static;
+    }
 
     &::before {
       content: 'Срок';
@@ -62,7 +125,16 @@
     line-height: $main-line-height;
     text-transform: uppercase;
     letter-spacing: .5px;
+    transition: background-color .5s ease;
 
+    &:hover {
+      background-color: $navigation-color;
+
+      &::after {
+        transform: translateX(5px);
+        transition: transform .5s ease;
+      }
+    }
     &::after {
       content: '';
       position: absolute;
