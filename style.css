@@ -748,6 +748,7 @@ table {
     left: 0;
     right: 0;
     bottom: 0;
+    height: 100vh;
     background: rgba(255, 255, 255, 0.96);
     z-index: 2; }
   .main.menu-opened::after {
@@ -1039,16 +1040,114 @@ table {
     border: 2px solid #FF3E79;
     border-radius: 50%;
     font-size: 0;
-    -webkit-tap-highlight-color: transparent; }
-    .slider__link::after {
+    -webkit-tap-highlight-color: transparent;
+    transition: all .5s ease; }
+    .slider__link:hover {
+      background-color: #41F6D7;
+      border-color: #41F6D7; }
+      .slider__link:hover::after {
+        opacity: 0;
+        transform: translate(20%, -50%);
+        transition-property: transform, opacity;
+        transition-duration: .3s, .1s;
+        transition-delay: 0s, .2s; }
+      .slider__link:hover::before {
+        opacity: 1;
+        width: 10px;
+        height: 14px;
+        transform: translate(20%, -50%);
+        background: url(./static/dropdown.svg) no-repeat center center;
+        background-size: contain;
+        transition-property: opacity;
+        transition-delay: .3s; }
+    .slider__link::after, .slider__link::before {
       content: '';
       position: absolute;
+      top: 50%;
+      left: 50%; }
+    .slider__link::after {
       width: 8px;
       height: 12px;
-      top: 50%;
-      left: 50%;
       transform: translate(-30%, -50%);
       background: url(./static/arrow-icon.svg) no-repeat center center; }
+    .slider__link::before {
+      opacity: 0; }
+
+@media (min-width: 1360px) {
+  .footer {
+    margin-left: 320px; } }
+
+.footer__info {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  color: #7E7E82;
+  border-top: 1px solid #D9FFF5; }
+  @media (min-width: 768px) {
+    .footer__info {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px; } }
+
+.footer__item {
+  display: block;
+  margin: 16px 0;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .footer__item {
+      margin: 32px 0 25px;
+      flex-basis: 330px; } }
+
+@media (min-width: 768px) {
+  .footer__copyright {
+    text-align: left; } }
+
+@media (min-width: 768px) {
+  .footer__disclaimer {
+    text-align: right; } }
+
+.footer__confidential-policy:hover {
+  color: #FF3E79; }
+
+.commercial-offer__text {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  width: 285px; }
+  @media (min-width: 768px) {
+    .commercial-offer__text {
+      width: 421px; } }
+
+.commercial-offer__link {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 40px;
+  width: 285px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500; }
+  @media (min-width: 768px) {
+    .commercial-offer__link {
+      width: auto; } }
+  .commercial-offer__link:hover {
+    color: #7E7E82; }
+    .commercial-offer__link:hover:after {
+      transform: translateX(5px);
+      transition: all .3s ease; }
+  .commercial-offer__link::after {
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 6px;
+    right: 168px;
+    bottom: 0;
+    margin-bottom: 5px;
+    transition: all .3s ease;
+    background: url(./static/arrow-icon.svg) center/cover no-repeat; }
+    @media (min-width: 768px) {
+      .commercial-offer__link::after {
+        right: -15px; } }
 
 .about__menu {
   padding: 24px 0;
@@ -1155,6 +1254,8 @@ table {
   @media (min-width: 768px) {
     .services__list {
       height: 175px; } }
+  .services__list::after {
+    height: 160px; }
 
 .services__item {
   display: flex;
@@ -1163,6 +1264,121 @@ table {
 
 .services__link {
   align-self: flex-end; }
+
+.prices__terms {
+  display: none; }
+  @media (min-width: 768px) {
+    .prices__terms {
+      display: table-header-group; } }
+
+.prices__term {
+  display: table-cell; }
+
+.prices__list {
+  height: 246px; }
+  @media (min-width: 768px) {
+    .prices__list {
+      height: auto;
+      margin: 63px 0 0 0;
+      padding: 0 16px;
+      background: #fff;
+      border-radius: 6px;
+      overflow: visible; } }
+  @media (min-width: 1120px) {
+    .prices__list {
+      padding: 0 24px; } }
+  .prices__list::after {
+    height: 200px; }
+
+@media (min-width: 768px) {
+  .prices__wrapper {
+    display: table;
+    background: #FFF; } }
+
+.prices__item {
+  flex-direction: column;
+  width: 260px;
+  height: 200px;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  padding-top: 0; }
+  @media (min-width: 768px) {
+    .prices__item {
+      display: table-row;
+      padding: 0;
+      margin: 0;
+      width: auto;
+      height: auto; }
+      .prices__item:not(:last-child) .prices__group {
+        border-bottom: 1px solid #EAEAEA; }
+      .prices__item:first-child .prices__service::before,
+      .prices__item:first-child .prices__price::before,
+      .prices__item:first-child .prices__time::before {
+        display: block;
+        top: -32px; } }
+
+.prices__group {
+  position: relative;
+  margin-top: 36px; }
+  @media (min-width: 768px) {
+    .prices__group {
+      display: table-cell;
+      padding: 23px 0; } }
+  .prices__group:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; }
+
+.prices__service::before, .prices__price::before, .prices__time::before {
+  position: absolute;
+  color: #7E7E82;
+  top: -20px; }
+  @media (min-width: 768px) {
+    .prices__service::before, .prices__price::before, .prices__time::before {
+      display: none; } }
+
+.prices__service::before {
+  content: 'Ремонтые услуги'; }
+
+.prices__price::before {
+  content: 'Цена'; }
+
+.prices__time {
+  position: relative; }
+  @media (min-width: 768px) {
+    .prices__time {
+      position: static; } }
+  .prices__time::before {
+    content: 'Срок'; }
+
+.prices__order {
+  position: relative;
+  border: none;
+  border-radius: 16px;
+  background-color: #FF3E79;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 4px 40px 4px 12px;
+  font-size: .85em;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  transition: background-color .5s ease; }
+  .prices__order:hover {
+    background-color: #41F6D7; }
+    .prices__order:hover::after {
+      transform: translateX(5px);
+      transition: transform .5s ease; }
+  .prices__order::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    right: 16px;
+    top: 11px;
+    background: url(./static/dropdown.svg) no-repeat center center; }
 
 body {
   font-family: "TT Lakes", sans-serif;
@@ -1198,6 +1414,9 @@ a {
 
 .swiper-pagination-bullet-active {
   background: #B5B6BC; }
+
+.swiper-wrapper {
+  height: auto; }
 
 
 /*# sourceMappingURL=style.css.map*/
