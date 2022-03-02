@@ -2,18 +2,16 @@
   position: fixed;
   height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
-  bottom: 0;
-  top: 0;
   box-sizing: border-box;
   padding: 16px 0 0;
-  background: #fff;
-  overflow: auto;
   letter-spacing: -0.2px;
-  box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
-  opacity: 0;
-  visibility: hidden;
   transform: translateX(-400px);
   transition: transform .5s, opacity 1s, visibility .5s ease-in-out;
+  box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+  background: #fff;
   z-index: 99;
 
   @media (min-width: 361px) {
@@ -25,6 +23,10 @@
     visibility: visible;
     transform: translateX(0);
     box-shadow: none;
+
+    .rounded-button--icon--close {
+      display: none;
+    }
   }
 
   &__header {

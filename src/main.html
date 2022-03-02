@@ -1,22 +1,11 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="CPS - Услуги и сервисы по ремонту оргтехники">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
-  <title><%= htmlWebpackPlugin.options.title %></title>
-</head>
-<body>
 <div class="wrapper">
   <nav class="menu">
     <div class="container-menu">
       <header class="menu__header">
         <button
           type="button"
-          class="rounded-button rounded-button--icon rounded-button--icon--close rounded-button--menu">
-          Закрыть меню
+          class="rounded-button rounded-button--icon rounded-button--icon--close rounded-button--menu"
+          data-close="menu">Закрыть меню
         </button>
         <div class="logo logo--mobile ">
           <img src="img/icons/logo.svg" alt="logo" class="logo__image">
@@ -377,40 +366,3 @@
     </div>
   </footer>
 </div>
-<form action="#" class="modal modal__feedback">
-  <div class="container">
-    <button
-      type="button"
-      class="rounded-button rounded-button--icon rounded-button--icon--close rounded-button--modal">
-      Закрыть окно обратной связи
-    </button>
-    <h3 class="modal__title main__title">Обратная связь</h3>
-    <input type="text" class="modal__input" name="user-name" placeholder="Имя">
-    <input type="tel" class="modal__input" name="user-phone" pattern="[+]{1}[0-9]{11,14}" placeholder="Телефон">
-    <input type="email" class="modal__input" name="user-email" placeholder="Электронная почта">
-    <textarea class="modal__input" name="user-message" cols="30" rows="10">Сообщение</textarea>
-    <p class="modal__personal-policy">
-      Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-      <a href="#">политикой конфиденциальности</a>
-    </p>
-    <button type="submit" class="rounded-button--order modal__button modal__button--right">Отправить</button>
-  </div>
-</form>
-<form action="#" class="modal modal__callback">
-  <div class="container">
-    <button
-      type="button"
-      class="rounded-button rounded-button--icon rounded-button--icon--close rounded-button--modal">
-      Закрыть окно заказа обратного звонка
-    </button>
-    <h3 class="modal__title main__title">Заказать звонок</h3>
-    <input type="tel" class="modal__input" name="user-phone" pattern="[+]{1}[0-9]{11,14}" placeholder="Телефон">
-    <p class="modal__personal-policy">
-      Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-      <a href="#">политикой конфиденциальности</a>
-    </p>
-    <button type="submit" class="rounded-button--order modal__button modal__button--right">Отправить</button>
-  </div>
-</form>
-</body>
-</html>

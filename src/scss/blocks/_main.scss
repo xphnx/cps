@@ -8,19 +8,25 @@
 
   &::after {
     content: '';
-    position: absolute;
+    position: fixed;
     display: none;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100vh;
     background: rgba(255, 255, 255, .96);
     z-index: 2;
   }
 
-  &.menu-opened::after {
+  &.menu-opened::after,
+  &.modal__feedback-opened::after,
+  &.modal__callback-opened::after {
     display: block;
+  }
+
+  &.modal__feedback-opened::after,
+  &.modal__callback-opened::after{
+    z-index: 100;
   }
 
   &__title {
