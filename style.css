@@ -877,7 +877,7 @@ table {
   .rounded-button--menu:not(:last-of-type) {
     margin-right: 16px; }
   .rounded-button--modal {
-    margin-bottom: 32px; }
+    margin: 24px 0 8px 16px; }
   .rounded-button--order {
     position: relative;
     border: none;
@@ -1311,7 +1311,6 @@ table {
   max-width: 440px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 24px 0;
   font-size: 14px;
   line-height: 16px;
   -webkit-transform: translateX(450px);
@@ -1327,6 +1326,23 @@ table {
   opacity: 0;
   background: #FFF;
   z-index: 100; }
+  @media (min-width: 520px) {
+    .modal {
+      overflow: visible; }
+      .modal .rounded-button--icon--close {
+        position: absolute;
+        left: -85px; } }
+  .modal .container {
+    padding: 24px 16px; }
+    @media (min-width: 520px) {
+      .modal .container {
+        overflow: auto;
+        height: calc(var(--vh, 1vh) * 100);
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; } }
+    @media (min-width: 768px) {
+      .modal .container {
+        padding: 24px; } }
   .modal__title {
     margin-bottom: 24px; }
   .modal__input {
