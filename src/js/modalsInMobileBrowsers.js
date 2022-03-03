@@ -16,8 +16,8 @@ export function manageModalBehavior() {
   function toggleModal(toggle, modal) {
     const element = chooseModal(modal);
 
+    if (wrapper.classList.length !== 3) document.body.classList[toggle]('overflow-hidden');
     wrapper.classList[toggle](`${modal}-opened`);
-    document.body.classList[toggle]('overflow-hidden');
     element.classList[toggle](`${modal}--opened`);
   }
 
