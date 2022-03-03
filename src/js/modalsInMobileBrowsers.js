@@ -3,7 +3,7 @@ export function fixViewportUnits() {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-export function manageMenuBehavior() {
+export function manageModalBehavior() {
   const burger = document.querySelector('.rounded-button--icon--burger');
   const closeButtons = document.querySelectorAll('.rounded-button--icon--close');
   const menu = document.querySelector('.menu');
