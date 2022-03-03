@@ -144,7 +144,10 @@
             <label for="about__ch" class="go-further go-further--about"></label>
           </div>
           <div class="about__image">
-            <img src="img/about-image.webp" alt="Центр по ремонту техники Dell" width="532" height="307">
+            <picture>
+              <source srcset="img/about-image.webp">
+              <img src="img/about-image.jpg" alt="Центр по ремонту техники Dell" width="532" height="307">
+            </picture>
           </div>
         </div>
       </div>
@@ -160,47 +163,80 @@
         <div class="brands__list slider swiper">
           <div class="brands__wrapper slider__wrapper swiper-wrapper">
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/lenovo.png" alt="Lenovo Brand">
+              <picture>
+                <source srcset="img/brands/lenovo.webp">
+                <img class="brands__image" src="img/brands/lenovo.png" alt="Lenovo Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Lenovo</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/samsung.png" alt="Samsung Brand">
+              <picture>
+                <source srcset="img/brands/samsung.webp">
+                <img class="brands__image" src="img/brands/samsung.png" alt="Samsung Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Samsung</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/apple.png" alt="Apple Brand">
+              <picture>
+                <source srcset="img/brands/apple.webp">
+                <img class="brands__image" src="img/brands/apple.png" alt="Apple Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Apple</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/viewsonic.png" alt="ViewSonic Brand">
+              <picture>
+                <source srcset="img/brands/viewsonic.webp">
+                <img class="brands__image" src="img/brands/viewsonic.png" alt="ViewSonic Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">ViewSonic</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/bosh.png" alt="Bosh Brand">
+              <picture>
+                <source srcset="img/brands/bosh.webp">
+                <img class="brands__image" src="img/brands/bosh.png" alt="Bosh Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Bosh</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/hp.png" alt="HP Brand">
+              <picture>
+                <source srcset="img/brands/hp.webp">
+                <img class="brands__image" src="img/brands/hp.png" alt="HP Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">HP</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/acer.png" alt="Acer Brand">
+              <picture>
+                <source srcset="img/brands/acer.webp">
+                <img class="brands__image" src="img/brands/acer.png" alt="Acer Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Acer</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/sony.png" alt="Sony Brand">
+              <picture>
+                <source srcset="img/brands/sony.webp">
+                <img class="brands__image" src="img/brands/sony.png" alt="Sony Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Sony</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/lenovo.png" alt="Lenovo Brand">
+              <picture>
+                <source srcset="img/brands/lenovo.webp">
+                <img class="brands__image" src="img/brands/lenovo.png" alt="Lenovo Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Lenovo</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/samsung.png" alt="Samsung Brand">
+              <picture>
+                <source srcset="img/brands/samsung.webp">
+                <img class="brands__image" src="img/brands/samsung.png" alt="Samsung Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Samsung</a>
             </div>
             <div class="brands__item slider__item swiper-slide">
-              <img class="brands__image" src="img/brands/apple.png" alt="Apple Brand">
+              <picture>
+                <source srcset="img/brands/apple.webp">
+                <img class="brands__image" src="img/brands/apple.png" alt="Apple Brand" width="128" height="30">
+              </picture>
               <a href="#" class="brands__link slider__link">Apple</a>
             </div>
           </div>
@@ -359,7 +395,7 @@
     <input type="text" class="modal__input" name="user-name" placeholder="Имя">
     <input type="tel" class="modal__input" name="user-phone" pattern="[+]{1}[0-9]{11,14}" placeholder="Телефон">
     <input type="email" class="modal__input" name="user-email" placeholder="Электронная почта">
-    <textarea class="modal__input" name="user-message" cols="30" rows="10">Сообщение</textarea>
+    <textarea class="modal__input modal__input--textarea" name="user-message" cols="30" rows="5" placeholder="Сообщение"></textarea>
     <p class="modal__personal-policy">
       Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
       <a href="#">политикой конфиденциальности</a>
