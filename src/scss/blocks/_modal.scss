@@ -52,6 +52,16 @@
     border-radius: 8px;
     padding: 12px 16px;
     box-sizing: border-box;
+
+    &::placeholder {
+      color: $placeholder-color;
+      font-size: $main-font-size;
+      line-height: $main-line-height;
+    }
+
+    &--textarea {
+      resize: none;
+    }
   }
   &__personal-policy {
     margin-bottom: 23px;
