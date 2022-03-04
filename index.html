@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link href="critical.css" rel="stylesheet"></head>
   <title>CPS Site Page</title>
-<link href="style.css" rel="stylesheet"></head>
 <body>
 <div class="wrapper">
   <nav class="menu">
@@ -417,5 +417,12 @@
     <button type="submit" class="rounded-button--order modal__button modal__button--right">Отправить</button>
   </div>
 </form>
-<script type="text/javascript" src="./js/bundle.js"></script></body>
+<script type="text/javascript" src="./js/bundle.js"></script>
+<script>
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'uncritical.css';
+  document.head.appendChild(link);
+</script>
+</body>
 </html>
