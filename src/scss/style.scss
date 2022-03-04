@@ -11,17 +11,18 @@
 @import 'blocks/section';
 @import 'blocks/main';
 @import 'blocks/rounded-button';
+@import 'blocks/modal';
 @import 'blocks/menu';
 @import 'blocks/lang-switcher';
 @import 'blocks/go-further';
-@import 'blocks/slider';
-@import 'blocks/footer';
-@import 'blocks/modal';
 
 @import 'sections/about';
 @import 'sections/brands';
 @import 'sections/services';
 @import 'sections/prices';
+
+@import 'blocks/slider';
+@import 'blocks/footer';
 
 body {
   font-family: $main-font-family;

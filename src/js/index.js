@@ -1,6 +1,6 @@
+import '../scss/style.scss';
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
-import '../scss/style.scss';
 
 import {manageSlidesShow} from "./slidersFunctions";
 import {fixViewportUnits, manageModalBehavior} from "./modalsInMobileBrowsers";
