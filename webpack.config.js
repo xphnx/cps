@@ -77,19 +77,6 @@ module.exports = {
         from: './src/img',
         to: 'img',
       },
-    ]),
-    new HtmlCriticalWebpackPlugin({
-      base: path.resolve(__dirname, 'dist'),
-      src: 'index.html',
-      dest: 'index.html',
-      inline: true,
-      minify: true,
-      extract: true,
-      width: 375,
-      height: 565,
-      penthouse: {
-        blockJSRequests: false,
-      }
-    })
+    ])
   ],
 };
