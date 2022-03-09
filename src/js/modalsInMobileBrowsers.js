@@ -7,8 +7,8 @@ export function manageModalBehavior() {
   const burger = document.querySelector('.rounded-button--icon--burger');
   const closeButtons = document.querySelectorAll('.rounded-button--icon--close');
   const menu = document.querySelector('.menu');
-  const modalFeedback = document.querySelector('.modal__feedback')
-  const modalCallBack = document.querySelector('.modal__callback');
+  const modalFeedback = document.querySelector('.modal--feedback')
+  const modalCallBack = document.querySelector('.modal--callback');
   const wrapper = document.querySelector('.main');
   const buttonsCallBack = document.querySelectorAll('.rounded-button--icon--callback');
   const buttonsMessage = document.querySelectorAll('.rounded-button--icon--message');
@@ -23,16 +23,16 @@ export function manageModalBehavior() {
 
   function chooseModal(modal) {
     return modal === 'menu' ? menu
-      : modal === 'modal__feedback' ? modalFeedback : modalCallBack;
+      : modal === 'modal--feedback' ? modalFeedback : modalCallBack;
   }
 
   function manageCloseSequence() {
     let element = 'menu';
 
-    if (wrapper.classList.contains('modal__feedback-opened')) {
-      element = 'modal__feedback';
-    } else if (wrapper.classList.contains('modal__callback-opened')) {
-      element = 'modal__callback';
+    if (wrapper.classList.contains('modal--feedback-opened')) {
+      element = 'modal--feedback';
+    } else if (wrapper.classList.contains('modal--callback-opened')) {
+      element = 'modal--callback';
     }
     return element;
   }
@@ -40,11 +40,11 @@ export function manageModalBehavior() {
   burger.addEventListener('click', () => toggleModal('add', 'menu'));
 
   buttonsCallBack.forEach(button => {
-    button.addEventListener('click', () => toggleModal('add', 'modal__feedback'))
+    button.addEventListener('click', () => toggleModal('add', 'modal--feedback'))
   });
 
   buttonsMessage.forEach(button => {
-    button.addEventListener('click', () => toggleModal('add', 'modal__callback'))
+    button.addEventListener('click', () => toggleModal('add', 'modal--callback'))
   });
 
   closeButtons.forEach(button => {

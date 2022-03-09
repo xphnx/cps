@@ -1,9 +1,15 @@
 .go-further {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+
   &::after {
     letter-spacing: -0.2px;
     color: $main-font-color;
     cursor: pointer;
   }
+
   &::before {
     content: '';
     display: inline-block;
@@ -13,33 +19,20 @@
     background: url('../img/icons/further-icon.svg') no-repeat center center;
   }
 
-  &__checkbox {
-    display: none;
-
-    &:checked + .about__text-group,
-    &:checked + .slider {
-      height: auto;
-    }
-    &:checked ~ .go-further::before {
-      transform: rotate(180deg);
-    }
-    &:checked ~ .go-further--about::after,
-    &:checked ~ .go-further--brands::after {
-      content: 'Скрыть';
-    }
-  }
-  &--about::after {
-    content: 'Читать далее';
-  }
   &--brands {
     display: none;
-
-    &::after {
-      content: 'Показать всё';
-    }
 
     @media (min-width: 768px) {
       display: block;
     }
   }
+}
+
+.about__text-group.go-further-opened,
+.slider.go-further-opened {
+  height: auto;
+}
+
+.go-further-opened ~ .go-further::before {
+  transform: rotate(180deg);
 }

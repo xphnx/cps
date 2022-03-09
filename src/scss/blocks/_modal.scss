@@ -36,10 +36,9 @@
     @media (min-width: 768px) {
       padding: 24px;
     }
-  }
-
-  &__wrapper {
-
+    @media (min-width: 1120px) {
+      padding: 32px;
+    }
   }
 
   &__title {
@@ -70,16 +69,8 @@
       color: $icon-color;
     }
   }
-  &__button {
-    padding: 4px 39px 4px 20px;
-
-    &--right {
-      display: block;
-      margin-left: auto;
-    }
-  }
-  &__feedback,
-  &__callback {
+  &--feedback,
+  &--callback {
     &--opened {
       opacity: 1;
       visibility: visible;

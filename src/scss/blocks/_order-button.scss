@@ -1,0 +1,44 @@
+.order-button {
+  position: relative;
+  border: none;
+  border-radius: 16px;
+  background-color: $icon-color;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: .85em;
+  line-height: $main-line-height;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  transition: background-color .5s ease;
+
+  &:hover {
+    background-color: $navigation-color;
+
+    &::after {
+      transform: translateX(5px);
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    right: 16px;
+    top: 11px;
+    background: url('../img/icons/dropdown.svg') no-repeat center center;
+    transition: transform .5s ease;
+  }
+  &--order {
+    padding: 4px 40px 4px 12px;
+    font-size: .85em;
+    cursor: pointer;
+  }
+  &--modal {
+    padding: 4px 39px 4px 20px;
+
+    &--right {
+      display: block;
+      margin-left: auto;
+    }
+  }
+}

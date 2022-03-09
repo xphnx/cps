@@ -59,9 +59,9 @@
         <a href="mailto:mail@cps.com" class="menu__footer-email">mail@cps.com</a>
         <a href="tel:88008908900" class="menu__footer-phone">8 800 890 8900</a>
         <div class="menu__lang-switcher lang-switcher">
-          <span class="lang-switcher__item lang-switcher__item--selected">ru</span>
-          <span class="lang-switcher__item">en</span>
-          <span class="lang-switcher__item">ch</span>
+          <button type="button" class="lang-switcher__item lang-switcher__item--selected">ru</button>
+          <button type="button" class="lang-switcher__item">en</button>
+          <button type="button" class="lang-switcher__item">ch</button>
         </div>
       </footer>
     </div>
@@ -114,7 +114,7 @@
   <main class="main">
     <section class="about section">
       <div class="container">
-        <h1 class="main__title">
+        <h1 class="title">
           Услуги и сервисы
           <button
             type="button"
@@ -151,7 +151,6 @@
         </div>
         <div class="about__text-box">
           <div class="about__wrapper">
-            <input type="checkbox" id="about__ch" class="go-further__checkbox">
             <div class="about__text-group">
               <p class="about__text">
                 Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
@@ -168,7 +167,7 @@
                 рекомендациям и, в свою очередь, советуют нас родным и близким..
               </p>
             </div>
-            <label for="about__ch" class="go-further go-further--about"></label>
+            <button type="button" class="go-further go-further--about">Читать далее</button>
           </div>
           <div class="about__image">
             <picture>
@@ -186,7 +185,6 @@
         </span>
       </h2>
       <div class="container">
-        <input type="checkbox" id="brands__ch" class="go-further__checkbox">
         <div class="brands__list slider swiper">
           <div class="brands__wrapper slider__wrapper swiper-wrapper">
             <div class="brands__item slider__item swiper-slide">
@@ -269,7 +267,7 @@
           </div>
           <div class="brands__pagination slider__pagination swiper-pagination"></div>
         </div>
-        <label for="brands__ch" class="go-further go-further--brands"></label>
+        <button type="button" class="go-further go-further--brands">Показать всё</button>
       </div>
     </section>
     <section class="services section">
@@ -279,7 +277,6 @@
         </span>
       </h2>
       <div class="container">
-        <input type="checkbox" id="services__ch" class="go-further__checkbox">
         <div class="services__list slider swiper">
           <div class="services__wrapper slider__wrapper swiper-wrapper">
             <div class="services__item slider__item swiper-slide">
@@ -309,7 +306,7 @@
           </div>
           <div class="services__pagination slider__pagination swiper-pagination"></div>
         </div>
-        <label for="services__ch" class="go-further go-further--brands"></label>
+        <button class="go-further go-further--brands">Показать всё</button>
       </div>
     </section>
     <section class="prices section">
@@ -330,7 +327,7 @@
               </div>
               <div class="prices__group">
                 <span class="prices__time">30-120 мин</span>
-                <button type="button" class="prices__order rounded-button--order">Заказать</button>
+                <button type="button" class="order-button order-button--order">Заказать</button>
               </div>
             </div>
             <div class="prices__item slider__item swiper-slide">
@@ -342,7 +339,7 @@
               </div>
               <div class="prices__group">
                 <span class="prices__time">30 мин</span>
-                <button type="button" class="prices__order rounded-button--order">Заказать</button>
+                <button type="button" class="order-button order-button--order">Заказать</button>
               </div>
             </div>
             <div class="prices__item slider__item swiper-slide">
@@ -354,7 +351,7 @@
               </div>
               <div class="prices__group">
                 <span class="prices__time">30-120 мин</span>
-                <button type="button" class="prices__order rounded-button--order">Заказать</button>
+                <button type="button" class="order-button order-button--order">Заказать</button>
               </div>
             </div>
             <div class="prices__item slider__item swiper-slide">
@@ -366,7 +363,7 @@
               </div>
               <div class="prices__group">
                 <span class="prices__time">30-120 мин</span>
-                <button type="button" class="prices__order rounded-button--order">Заказать</button>
+                <button type="button" class="order-button order-button--order">Заказать</button>
               </div>
             </div>
             <div class="prices__item slider__item swiper-slide">
@@ -378,7 +375,7 @@
               </div>
               <div class="prices__group">
                 <span class="prices__time">30-120 мин</span>
-                <button type="button" class="prices__order rounded-button--order">Заказать</button>
+                <button type="button" class="order-button order-button--order">Заказать</button>
               </div>
             </div>
           </div>
@@ -413,14 +410,14 @@
     </div>
   </footer>
 </div>
-<form action="#" class="modal modal__feedback">
+<form action="#" class="modal modal--feedback">
   <button
     type="button"
     class="rounded-button rounded-button--icon rounded-button--icon--close rounded-button--modal">
     Закрыть окно обратной связи
   </button>
   <div class="container">
-    <h3 class="modal__title main__title">Обратная связь</h3>
+    <h3 class="modal__title title">Обратная связь</h3>
     <input type="text" class="modal__input" name="user-name" placeholder="Имя">
     <input type="tel" class="modal__input" name="user-phone" pattern="[+]{1}[0-9]{11,14}" placeholder="Телефон">
     <input type="email" class="modal__input" name="user-email" placeholder="Электронная почта">
@@ -431,23 +428,23 @@
       Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
       <a href="#">политикой конфиденциальности</a>
     </p>
-    <button type="submit" class="rounded-button--order modal__button modal__button--right">Отправить</button>
+    <button type="submit" class="order-button order-button--modal order-button--modal--right">Отправить</button>
   </div>
 </form>
-<form action="#" class="modal modal__callback">
+<form action="#" class="modal modal--callback">
   <button
     type="button"
     class="rounded-button rounded-button--icon rounded-button--icon--close rounded-button--modal">
     Закрыть окно заказа обратного звонка
   </button>
   <div class="container">
-    <h3 class="modal__title main__title">Заказать звонок</h3>
+    <h3 class="modal__title title">Заказать звонок</h3>
     <input type="tel" class="modal__input" name="user-phone" pattern="[+]{1}[0-9]{11,14}" placeholder="Телефон">
     <p class="modal__personal-policy">
       Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
       <a href="#">политикой конфиденциальности</a>
     </p>
-    <button type="submit" class="rounded-button--order modal__button modal__button--right">Отправить</button>
+    <button type="submit" class="order-button order-button--modal order-button--modal--right">Отправить</button>
   </div>
 </form>
 </body>
